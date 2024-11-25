@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode dev",
+    "prod": "vite --mode prod",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -12,6 +13,7 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "eslint": "^9.15.0",
     "js-cookie": "^3.0.5",
     "mockjs": "^1.1.0",
     "pinia": "^2.2.6",
@@ -22,7 +24,8 @@
     "@tsconfig/node22": "^22.0.0",
     "@types/axios": "^0.9.36",
     "@types/js-cookie": "^3.0.6",
-    "@types/node": "^22.9.1",
+    "@types/mockjs": "^1.0.10",
+    "@types/node": "^22.9.3",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/tsconfig": "^0.5.1",
     "element-plus": "^2.8.8",

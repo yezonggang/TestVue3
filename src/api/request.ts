@@ -3,7 +3,7 @@ import axios from "axios";
 import { ElMessage } from "element-plus";
 // 创建Axios实例
 const axiosInstance = axios.create({
-  baseURL: "http://127.0.0.1", // 替换为你的API基础URL
+  baseURL: import.meta.env.VITE_BASE_PATH + import.meta.env.VITE_API_URL, // 替换为你的API基础URL
   timeout: 10000, // 请求超时时间
   headers: { "Content-Type": "application/json" },
 });

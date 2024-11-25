@@ -20,6 +20,7 @@
 
 <script lang="ts" setup>
 import {ref} from 'vue'
+import {loginApi} from "@/api/login"
 
 const loginFormData=ref({
     loginUser: "",
@@ -27,6 +28,10 @@ const loginFormData=ref({
 })
 function login(){
     console.log(loginFormData)
+    loginApi(loginFormData.value).then((res:any) => {
+        console.log(res);
+    })
+
 }
 
 
