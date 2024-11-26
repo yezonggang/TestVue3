@@ -21,15 +21,28 @@
 <script lang="ts" setup>
 import {ref} from 'vue'
 import {loginApi} from "@/api/login"
-
+import {useTokenStore} from "@/stores/useToken"
+import router from "@/router"
+const tokenStore=useTokenStore()
 const loginFormData=ref({
     loginUser: "",
     loginPwd:""
 })
+
 function login(){
     console.log(loginFormData)
     loginApi(loginFormData.value).then((res:any) => {
         console.log(res);
+        console.log(res.code)
+        if(res.code==200){
+            alert("登录成功")
+            tokenStore.setToken(res.data["token"])
+            tokenStore.token=res.data["token"]
+            router.push("/home")
+        }else{
+            alert("登录失败")
+         }
+
     })
 
 }

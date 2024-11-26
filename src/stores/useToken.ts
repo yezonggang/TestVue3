@@ -7,6 +7,7 @@ export const useTokenStore = defineStore("token", () => {
 
   function setToken(token: string) {
     Cookies.set("token", token);
+    return token;
   }
   return { token, setToken };
 });
