@@ -1,4 +1,5 @@
 <template>
+    <div class="login-bg">
     <div class="login-content">
         <el-form :model="loginFormData" label-width="auto" style="max-width: 600px">
             <el-form-item label="用户名">
@@ -13,6 +14,7 @@
             <el-button type="info">注册</el-button>
         </div>
 
+    </div>
     </div>
 </template>
 
@@ -52,6 +54,15 @@ function login(){
 
 
 <style lang="scss" scoped>
+.login-bg{
+  height: 100%;
+  width: 100%;
+  background-image: url("/src/assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .login-content{
     height: 300px;
     width: 400px;
