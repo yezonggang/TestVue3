@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite --mode dev",
     "prod": "vite --mode prod",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "node --max_old_space_size=8192 ./node_modules/vite/bin/vite.js build --mode prod",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
     "axios": "^1.7.7",
     "better-mock": "^0.3.7",
     "eslint": "^9.15.0",
