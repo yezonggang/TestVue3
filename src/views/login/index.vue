@@ -23,13 +23,35 @@
 <script lang="ts" setup>
 import {ref} from 'vue'
 import {loginApi} from "@/api/login"
-import {useTokenStore} from "@/stores/useToken"
+import { getMenuList } from '@/api/menu'
+import { useTokenStore} from "@/stores/useToken"
+import useMenuStore from '@/stores/useMenu'
 import router from "@/router"
+
 const tokenStore=useTokenStore()
+const menuStore = useMenuStore()
+
 const loginFormData=ref({
     loginUser: "",
     loginPwd:""
 })
+
+interface MenuItem {
+  path: string;
+  name: string;
+  label: string;
+  icon: string;
+  url: string;
+}
+
+interface Data {
+  menu: MenuItem[];
+}
+
+interface Response {
+  code: number;
+  data: Data;
+}
 
 function login(){
     console.log(loginFormData)
@@ -39,7 +61,18 @@ function login(){
         if(res.code==200){
             alert("登录成功")
             tokenStore.setToken(res.data["token"])
+            console.log("token is "+res.data["token"]);
             tokenStore.token=res.data["token"]
+            // 获取menu菜单
+            getMenuList(loginFormData.value).then((res2:any) => {
+                //const menuList1= res2 as Response;
+                const menuList1= res2 ;
+                console.log(menuList1);
+                console.log(menuList1.data);
+                console.log(menuList1.code);
+                menuStore.setMenu(menuList1.data.menu)
+                console.log("menu is "+menuList1.data.menu[1].path);
+            })
             router.push("/home")
         }else{
             alert("登录失败")
