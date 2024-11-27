@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { RouterView } from 'vue-router';
-import commonSider from "../../components/home/commonSider.vue"
+import commonSider from "../../components/home/CommonSider.vue";
 
 
 </script>

@@ -71,9 +71,9 @@ function login(){
                 console.log(menuList1.data);
                 console.log(menuList1.code);
                 menuStore.setMenu(menuList1.data.menu)
-                console.log("menu is "+menuList1.data.menu[1].path);
+                menuStore.setRouter(menuList1.data.menu);
             })
-            router.push("/home")
+            router.push("/home/main")
         }else{
             alert("登录失败")
          }
