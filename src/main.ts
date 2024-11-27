@@ -1,4 +1,7 @@
+// 引入全局css
 import "./assets/style.css";
+// 引入unocss css
+import "@/plugins/unocss";
 import "element-plus/theme-chalk/index.css";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
