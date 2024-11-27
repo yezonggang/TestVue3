@@ -1,7 +1,7 @@
 // 引入全局css
 import "./assets/style.css";
 // 引入unocss css
-import "@/plugins/unocss";
+import "virtual:uno.css";
 import "element-plus/theme-chalk/index.css";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
@@ -9,6 +9,7 @@ import ElementPlus from "element-plus";
 import App from "./App.vue";
 import router from "./router";
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
+import "virtual:uno.css";
 
 if (import.meta.env.VITE_DEV == "true") {
   console.log(import.meta.env.VITE_APP_TITLE);

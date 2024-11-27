@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "@unocss/vite": "^0.64.1",
     "axios": "^1.7.7",
     "better-mock": "^0.3.7",
     "eslint": "^9.15.0",
