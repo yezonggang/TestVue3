@@ -6,6 +6,7 @@ interface menuItem {
   component?: Component | string;
   icon?: string;
   children?: menuItem[];
+  redirect?: string | RouteRecordRedirectOption;
 }
 
 type Component<T = any> = ReturnType<typeof defineComponent> | (() => Promise<typeof import("*.vue")>) | (() => Promise<T>);

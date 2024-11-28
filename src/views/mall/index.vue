@@ -1,5 +1,5 @@
 <template>
-    main
+    mall
 </template>
 
 <script lang="ts" setup>  </script>

@@ -1,5 +1,5 @@
 <template>
-    main
+    pagetow
 </template>
 
 <script lang="ts" setup>  </script>

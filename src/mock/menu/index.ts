@@ -9,31 +9,26 @@ const menuMockAPi = {
           {
             path: "/home",
             label: "主页",
-            component: "/home/index.vue",
+            name: "home",
+            component: "home/inde",
             children: [
               {
                 path: "/home/main",
                 name: "main",
                 label: "首页",
                 icon: "s-home",
-                component: "/main/index.vue",
+                component: "main/index",
               },
               {
                 path: "/home/mall",
                 name: "mall",
                 label: "商品管理",
                 icon: "video-play",
-                component: "/mall/index.vue",
-              },
-              {
-                path: "/home/user",
-                name: "user",
-                label: "用户管理",
-                icon: "user",
-                component: "/user/index.vue",
+                component: "mall/index",
               },
               {
                 label: "其他",
+                name: "other",
                 icon: "location",
                 children: [
                   {
@@ -41,14 +36,14 @@ const menuMockAPi = {
                     name: "page1",
                     label: "页面1",
                     icon: "setting",
-                    component: "Other/PageOne.vue",
+                    component: "other/PageOne",
                   },
                   {
                     path: "/page2",
                     name: "page2",
                     label: "页面2",
                     icon: "setting",
-                    component: "Other/PageTwo.vue",
+                    component: "other/PageTwo",
                   },
                 ],
               },

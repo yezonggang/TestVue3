@@ -1,5 +1,5 @@
 <template>
-    main
+    pageone
 </template>
 
 <script lang="ts" setup>  </script>

@@ -70,10 +70,10 @@ function login(){
                 console.log(menuList1);
                 console.log(menuList1.data);
                 console.log(menuList1.code);
-                menuStore.setMenu(menuList1.data.menu)
-                menuStore.setRouter(menuList1.data.menu);
+                //menuStore.setMenu(menuList1.data.menu)
+                //menuStore.setRouter();
             })
-            router.push("/home/main")
+            router.push({ name: 'main' })
         }else{
             alert("登录失败")
          }
