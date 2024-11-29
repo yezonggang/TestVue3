@@ -10,6 +10,7 @@ import App from "./App.vue";
 import router from "./router";
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import "virtual:uno.css";
+import * as IconifyIcon from "@iconify/vue";
 
 if (import.meta.env.VITE_DEV == "true") {
   console.log(import.meta.env.VITE_APP_TITLE);
@@ -29,5 +30,6 @@ function startApp() {
   app.use(createPinia());
   app.use(router);
   app.use(ElementPlus);
+  app.component("icon", IconifyIcon);
   app.mount("#app");
 }

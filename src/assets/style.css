@@ -9,6 +9,13 @@ body {
   margin: 0;
   padding: 0;
 }
+.iconify {
+  width: 20px; /* 设置图标宽度 */
+  height: 20px; /* 设置图标高度 */
+  /* color: #e6e7e9;  */
+  vertical-align: middle; /* 垂直居中对齐 */
+  margin-right: 6px;
+}
 /* body {
   min-height: 100vh;
   color: var(--color-text);

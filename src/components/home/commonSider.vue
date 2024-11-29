@@ -9,7 +9,7 @@
 
         <!-- 不带子路由的菜单 -->
         <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" >
-          <el-icon><location /></el-icon>
+          <icon icon="mdi:home" />
           <span>{{ item.label }}</span>
         </el-menu-item>
 
@@ -32,6 +32,7 @@
 <script  lang="ts" setup>
 import { ref,onMounted } from 'vue'
 import router from '@/router';
+import { Icon } from '@iconify/vue';
 // import useMenuStore from '@/stores/useMenu';
 // const useMenu = useMenuStore()
 // onMounted(()=>{
@@ -43,25 +44,25 @@ const fakeMenu = ref<menuItem[]>([
             path: '/home/main',
             name: 'main',
             label: '首页',
-            icon: 's-home',
+            icon: 'home',
           },
           {
             path: '/home/mall',
             name: 'mall',
             label: '商品管理',
-            icon: 'video-play',
+            icon: 'home',
           },
           {
             path: '/home/user',
             name: 'user',
             label: '用户管理',
-            icon: 'user',
+            icon: 'home',
           },
           {
             label: '其他',
             path: '/home/other',
             name: 'other',
-            icon: 'location',
+            icon: 'home',
             children: [
               {
                 path: '/page1',
