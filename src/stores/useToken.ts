@@ -9,5 +9,11 @@ export const useTokenStore = defineStore("token", () => {
     Cookies.set("token", token);
     return token;
   }
-  return { token, setToken };
+  function clearToken(token: string) {
+    Cookies.set("token", "");
+    return token;
+  }
+  return { token, setToken, clearToken };
 });
+
+export default useTokenStore;

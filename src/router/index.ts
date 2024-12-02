@@ -40,6 +40,46 @@ const router = createRouter({
             icon: "video-play",
           },
         },
+        {
+          path: "/home/user",
+          name: "user",
+          //redirect: "/home/main",
+          component: () => import("@/views/user/index.vue"),
+          children: [],
+          meta: {
+            label: "用户管理",
+            icon: "video-play",
+          },
+        },
+        {
+          path: "/home/tabs",
+          name: "tabs",
+          //redirect: "/home/main",
+          children: [
+            {
+              path: "/home/tabs/address",
+              name: "address",
+              //redirect: "/home/main",
+              component: () => import("@/views/address/index.vue"),
+              children: [],
+              meta: {
+                label: "地址管理",
+                icon: "video-play",
+              },
+            },
+            {
+              path: "/home/tabs/customer",
+              name: "customer",
+              //redirect: "/home/main",
+              component: () => import("@/views/customer/index.vue"),
+              children: [],
+              meta: {
+                label: "客户管理",
+                icon: "video-play",
+              },
+            },
+          ],
+        },
       ],
     },
   ],

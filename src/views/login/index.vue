@@ -59,7 +59,8 @@ function login(){
         console.log(res);
         console.log(res.code)
         if(res.code==200){
-            alert("登录成功")
+            //alert("登录成功")
+            console.log("登录成功")
             tokenStore.setToken(res.data["token"])
             console.log("token is "+res.data["token"]);
             tokenStore.token=res.data["token"]
@@ -75,7 +76,8 @@ function login(){
             })
             router.push({ name: 'main' })
         }else{
-            alert("登录失败")
+            //alert("登录失败")
+            console.log("登录失败")
          }
 
     })

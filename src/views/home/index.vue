@@ -1,8 +1,11 @@
 <template>
       <el-container class="common-layout">
-      <commonSider></commonSider>
+        <el-aside width="200px">
+          <commonSider></commonSider>
+          </el-aside> 
         <el-container>
           <el-header class="common-header">
+            <commonHeader></commonHeader>
           </el-header>
           <el-main>
             <RouterView></RouterView>
@@ -17,6 +20,7 @@
 import { ref } from 'vue'
 import { RouterView } from 'vue-router';
 import commonSider from "../../components/home/commonSider.vue";
+import commonHeader from "../../components/home/commonHeader.vue"; 
 
 
 </script>

@@ -1,6 +1,5 @@
 <template>
-        <el-aside width="200px" class="comman-aside">
-          <el-menu
+      <el-menu
         default-active="2"
         class="el-menu-vertical-demo"
         @open="handleOpen"
@@ -24,7 +23,6 @@
           </el-menu-item-group>
         </el-sub-menu>
       </el-menu>
-        </el-aside>
 </template>
 
 
@@ -58,21 +56,21 @@ const fakeMenu = ref<menuItem[]>([
             icon: 'home',
           },
           {
-            label: '其他',
-            path: '/home/other',
-            name: 'other',
+            label: '标签维护',
+            path: '/home/tabs',
+            name: 'tabs',
             icon: 'home',
             children: [
               {
-                path: '/page1',
-                name: 'page1',
-                label: '页面1',
+                path: '/address',
+                name: 'address',
+                label: '地址管理',
                 icon: 'setting',
               },
               {
-                path: '/page2',
-                name: 'page2',
-                label: '页面2',
+                path: '/customer',
+                name: 'customer',
+                label: '客户管理',
                 icon: 'setting',
               }
             ]
