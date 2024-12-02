@@ -4,10 +4,9 @@
         default-active="2"
         class="el-menu-vertical-demo"
         @open="handleOpen"
-        @close="handleClose"
-        >
-
+        @close="handleClose">
         <!-- 不带子路由的菜单 -->
+         <h3 class="menu-title">TestVue3测试系统</h3>
         <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" >
           <icon icon="mdi:home" />
           <span>{{ item.label }}</span>
@@ -107,4 +106,15 @@ function clickMenu(item:menuItem){
 
 <style lang="scss">
 
+.el-menu {
+  height: 100%;
+  border-right: none;
+  background-color: #a9a1c5;
+}
+.menu-title {
+  margin-top: 0; /* 移除顶部外边距 */
+  padding-top: 30px; /* 移除顶部内边距 */
+  padding-left: 10px;
+  margin-bottom: 10px; /* 调整底部外边距，根据需要调整 */
+}
 </style>

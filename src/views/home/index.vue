@@ -16,20 +16,15 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { RouterView } from 'vue-router';
-import commonSider from "../../components/home/CommonSider.vue";
+import commonSider from "../../components/home/commonSider.vue";
 
 
 </script>
 
 
 <style lang="scss">
-.common-layout, .common-aside, .el-menu {
+.common-layout {
   height: 100%;
-}
-
-.el-menu {
-  border-right: none;
-  background-color: #a9a1c5;
 }
 
 .common-header{

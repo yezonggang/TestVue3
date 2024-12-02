@@ -13,4 +13,4 @@
 ## css
 
 1. tailwindcss？unocss 的预设使用及生效策略，如何从全局（包含 element-plus）到局部（vue 组件）制定样式
-2. icon 图标暂使用 iconify，elmentplus 基于 iconify，最简化使用：https://icon-sets.iconify.design/?query=mall
+2. icon 图标暂使用 iconify:https://icon-sets.iconify.design/?query=mall , 待研究
