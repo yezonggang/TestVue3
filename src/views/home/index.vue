@@ -1,10 +1,11 @@
 <template>
       <el-container class="common-layout">
-        <el-aside class="common-sider">
+        <!-- 这里吧el-side注释掉了,因为侧边栏已经封装了且不影响el-container的flex左右样式,不去掉会多个侧边栏 -->
+        <!-- <el-aside > -->
           <commonSider></commonSider>
-          </el-aside> 
+          <!-- </el-aside>  -->
         <el-container>
-          <el-header class="common-header">
+          <el-header class="my-common-header">
             <commonHeader></commonHeader>
           </el-header>
           <el-main>
@@ -31,16 +32,16 @@ import commonHeader from "../../components/home/commonHeader.vue";
   height: 100%;
 }
 
-.common-header{
+.my-common-header{
   background-color: #a9a1c5;
 
 }
 
-.common-sider{
-  width: 200px;
-  height: 100%;
-  border-right: none;
-  background-color: #a9a1c5;
-}
+// .common-sider{
+//   width: 200px;
+//   height: 100%;
+//   border-right: none;
+//   background-color: #a9a1c5;
+// }
 
 </style>

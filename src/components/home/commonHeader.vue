@@ -1,7 +1,10 @@
 <template>
   <div>
-    <div class="header-bar" >
-        <el-button type="primary" @click="handMenu">隐藏菜单</el-button>
+    <div class="common-header-bar" >
+      <div>
+        <el-button v-if ="isCollapse == true" type="primary" @click="handMenu">展示菜单</el-button>
+        <el-button v-else type="primary" @click="handMenu">隐藏菜单</el-button>
+      </div>
         <el-dropdown>
       <el-button type="primary">
         个人中心<el-icon class="el-icon--right"><arrow-down /></el-icon>
@@ -43,6 +46,7 @@ import { storeToRefs } from 'pinia';
 
 const menuStore = useMenuStore()
 const {setCollapsed} = menuStore
+const {isCollapse} = storeToRefs(menuStore)
 const useTokenState = useToken()
 
 
@@ -94,8 +98,8 @@ const onCancel = () => {
 </script>
 
 
-<style scoped lang="scss" >
-.header-bar {
+<style lang="scss" scoped>
+.common-header-bar {
     margin-top: 15px;
     display: flex;
     justify-content: space-between; /* 添加此行 */

@@ -1,13 +1,17 @@
 <template>
       <el-menu
+        class="el-menu-vertical-demo"
         :collapse="isCollapse"
         default-active="2"
-        class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose">
         <!-- 不带子路由的菜单 -->
-         <h3 v-show="!isCollapse" class="menu-title">TestVue3测试系统</h3>
-        <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" >
+        <div>
+          <h3 v-if="!isCollapse" class="menu-title">TestVue3测试系统</h3>
+          <div v-else class="menu-title-placeholder"></div>
+            <!-- 其他菜单内容 -->
+          </div>
+          <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" >
           <icon icon="mdi:home" />
           <span>{{ item.label }}</span>
         </el-menu-item>
@@ -106,17 +110,34 @@ function clickMenu(item:menuItem){
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 
+// 菜单收起不收起都会生效，这里专门用来定义菜单收起的样式
 .el-menu {
   height: 100%;
   border-right: none;
   background-color: #a9a1c5;
 }
-.menu-title {
+// 菜单不收起的样式
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  height: 100%;
+  border-right: none;
+  background-color: #a9a1c5;
+  width: 200px;
+  min-height: 400px;
+}
+.menu-title{
   margin-top: 0; /* 移除顶部外边距 */
   padding-top: 30px; /* 移除顶部内边距 */
   padding-left: 10px;
   margin-bottom: 10px; /* 调整底部外边距，根据需要调整 */
+}
+
+.menu-title-placeholder{
+  margin-top: 0; /* 移除顶部外边距 */
+  padding-top: 30px; /* 移除顶部内边距 */
+  padding-left: 10px;
+  margin-bottom: 10px; /* 调整底部外边距，根据需要调整 */
+  height: 25px;
 }
 </style>
