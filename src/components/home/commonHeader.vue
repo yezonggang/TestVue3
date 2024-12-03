@@ -45,8 +45,10 @@ import  useMenuStore from '@/stores/useMenu'
 import { storeToRefs } from 'pinia';
 
 const menuStore = useMenuStore()
-const {setCollapsed} = menuStore
+// 结构store的同时保持响应式，能够监听store中的数据变化
 const {isCollapse} = storeToRefs(menuStore)
+// actions则不需要
+const {setCollapsed} = menuStore
 const useTokenState = useToken()
 
 
