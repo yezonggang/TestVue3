@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-
+// 扩展env环境变量
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_PORT: number;
@@ -14,6 +14,7 @@ interface ImportMetaEnv {
   readonly VITE_OUT_DIR: string;
 }
 
+// 声明全局可以使用
 declare global {
   interface ImportMeta {
     readonly env: ImportMetaEnv;

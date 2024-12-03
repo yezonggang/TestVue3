@@ -1,11 +1,12 @@
 <template>
       <el-menu
+        :collapse="isCollapse"
         default-active="2"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose">
         <!-- 不带子路由的菜单 -->
-         <h3 class="menu-title">TestVue3测试系统</h3>
+         <h3 v-show="!isCollapse" class="menu-title">TestVue3测试系统</h3>
         <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" >
           <icon icon="mdi:home" />
           <span>{{ item.label }}</span>
@@ -28,13 +29,16 @@
 
 <script  lang="ts" setup>
 import { ref,onMounted } from 'vue'
+import { storeToRefs } from 'pinia'
 import router from '@/router';
 import { Icon } from '@iconify/vue';
-// import useMenuStore from '@/stores/useMenu';
-// const useMenu = useMenuStore()
+import useMenuStore from '@/stores/useMenu';
+const useMenu = useMenuStore()
 // onMounted(()=>{
 //   menuArray.value = useMenu.menu
 // })
+const {isCollapse} = storeToRefs(useMenu)
+
 
 const fakeMenu = ref<menuItem[]>([
           {

@@ -7,12 +7,16 @@ const modulesRoutesKeys = Object.keys(modules);
 
 const useMenuStore = defineStore("menu", () => {
   const menu = ref<menuItem[]>([]);
-
+  const isCollapse = ref(false);
+  function setCollapsed() {
+    console.log("setCollapsed");
+    isCollapse.value = !isCollapse.value;
+    console.log("isCollapse.value" + isCollapse.value);
+  }
   function setMenu(menuList: menuItem[]) {
     menu.value = menuList;
     console.log("menu.value" + JSON.stringify(menu.value, null, 2));
   }
-
   function setRouter() {
     const menuList = menu.value;
     const routes = transRouter(menuList);
@@ -52,8 +56,10 @@ const useMenuStore = defineStore("menu", () => {
 
   return {
     menu,
-    setMenu,
-    setRouter,
+    isCollapse,
+    //setMenu,
+    //setRouter,
+    setCollapsed,
   };
 });
 

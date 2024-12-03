@@ -1,6 +1,6 @@
 <template>
       <el-container class="common-layout">
-        <el-aside width="200px">
+        <el-aside class="common-sider">
           <commonSider></commonSider>
           </el-aside> 
         <el-container>
@@ -26,7 +26,7 @@ import commonHeader from "../../components/home/commonHeader.vue";
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .common-layout {
   height: 100%;
 }
@@ -36,5 +36,11 @@ import commonHeader from "../../components/home/commonHeader.vue";
 
 }
 
+.common-sider{
+  width: 200px;
+  height: 100%;
+  border-right: none;
+  background-color: #a9a1c5;
+}
 
 </style>
