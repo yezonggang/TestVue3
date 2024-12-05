@@ -30,11 +30,11 @@ if (import.meta.env.VITE_DEV == "true") {
 
 function startApp() {
   const app = createApp(App);
-  setupI18n(app);
   for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component);
   }
   app.use(createPinia());
+  setupI18n(app);
   app.use(router);
   app.use(ElementPlus);
   app.component("icon", IconifyIcon);

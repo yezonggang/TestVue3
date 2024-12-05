@@ -12,6 +12,7 @@ const createI18nOptions = async (): Promise<I18nOptions> => {
   const localeStore = useLocaleStore();
   const locale = localeStore.getCurrentLocale;
   const localeMap = localeStore.getLocaleMap;
+  console.log("[ ------------i18n ]", locale);
   const defaultLocal = await import(`../../locales/${locale.lang}.ts`);
   const message = defaultLocal.default ?? {};
 
