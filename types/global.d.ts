@@ -91,4 +91,16 @@ declare global {
     topHeaderHoverColor?: string;
     topToolBorderColor?: string;
   };
+
+  // 导入自定义的本地化下拉选项类型
+  export interface Language {
+    el: Recordable;
+    name: string;
+  }
+
+  export interface LocaleDropdownType {
+    lang: LocaleType;
+    name?: string;
+    elLocale?: Language;
+  }
 }
