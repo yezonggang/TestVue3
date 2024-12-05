@@ -71,7 +71,10 @@ declare global {
     total: number; // 总量
   }
 
+  // 定义了一个联合类型，包含四种布局类型："classic"、"topLeft"、"top" 和 "cutMenu"。
   export type LayoutType = "classic" | "topLeft" | "top" | "cutMenu";
+
+  // 定义了一个接口，包含多个可选的字符串属性，用于配置主题颜色，如主色、菜单边框色、背景色、激活色、文本色等。
   export type ThemeTypes = {
     elColorPrimary?: string;
     leftMenuBorderColor?: string;
