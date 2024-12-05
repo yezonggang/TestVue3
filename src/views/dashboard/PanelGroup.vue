@@ -44,7 +44,7 @@ const { getPrefixCls } = useDesign()
 
 const prefixCls = getPrefixCls('panel')
 
-const loading = ref(true)
+const loading = ref(false)
 
 let totalState = reactive<AnalysisTotalTypes>({
   users: 0,
@@ -54,7 +54,7 @@ let totalState = reactive<AnalysisTotalTypes>({
 })
 
 const getCount = async () => {
-  totalState = Object.assign(totalState, dataApi?.data || {})
+  Object.assign(totalState, dataApi?.data || {})
 }
 
 getCount()
@@ -181,7 +181,6 @@ getCount()
 </template>
 
 <style lang="scss" scoped>
-$namespace: 'v'; // 替换为实际的命名空间值
 $prefix-cls: #{namespace}-panel;
 
 .#{$prefix-cls} {
@@ -202,7 +201,7 @@ $prefix-cls: #{namespace}-panel;
       color: #34bfa3;
     }
     &:hover {
-      ::v-deep(.#{$namespace}-icon) {
+      ::v-deep(.#{namespace}-icon) {
         color: #fff !important;
       }
       .#{$prefix-cls}__item--icon {
