@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "@iconify/iconify": "^3.1.1",
     "@iconify/vue": "^4.1.2",
     "@intlify/unplugin-vue-i18n": "^6.0.0",
     "@unocss/vite": "^0.64.1",
@@ -25,6 +26,7 @@
     "pinia": "^2.2.6",
     "pinia-plugin-persistedstate": "^4.1.3",
     "scss": "^0.2.4",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vue": "^3.5.12",
     "vue-i18n": "^10.0.5",
     "vue-router": "^4.4.5",
@@ -32,6 +34,8 @@
     "web-storage-cache": "^1.1.1"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.279",
+    "@purge-icons/generated": "^0.10.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/axios": "^0.9.36",
     "@types/js-cookie": "^3.0.6",
@@ -45,6 +49,7 @@
     "typescript": "~5.6.3",
     "unocss": "^0.64.1",
     "vite": "^5.4.10",
+    "vite-plugin-purge-icons": "^0.10.0",
     "vite-plugin-vue-devtools": "^7.5.4",
     "vue-tsc": "^2.1.10"
   }

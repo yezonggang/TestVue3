@@ -115,4 +115,9 @@ declare global {
    * 用于组件的样式和图标根据不同的信息类型进行变化，以直观地传达信息的性质
    */
   export type ElementPlusInfoType = "success" | "info" | "warning" | "danger";
+
+  declare module "vite-plugin-purge-icons" {
+    const PurgeIcons: any;
+    export default PurgeIcons;
+  }
 }

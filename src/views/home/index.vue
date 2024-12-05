@@ -18,7 +18,6 @@
 
 
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { RouterView } from 'vue-router';
 import commonSider from "../../components/home/commonSider.vue";
 import commonHeader from "../../components/home/commonHeader.vue"; 
@@ -30,11 +29,12 @@ import commonHeader from "../../components/home/commonHeader.vue";
 <style lang="scss" scoped>
 .common-layout {
   height: 100%;
+  border:none
 }
 
 .my-common-header{
   background-color: #a9a1c5;
-
+  border:none
 }
 
 // .common-sider{

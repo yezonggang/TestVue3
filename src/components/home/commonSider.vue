@@ -7,12 +7,12 @@
         @close="handleClose">
         <!-- 不带子路由的菜单 -->
         <div>
-          <h3 v-if="!isCollapse" class="menu-title">TestVue3测试系统</h3>
+          <h4 v-if="!isCollapse" class="menu-title">TestVue3测试系统</h4>
           <div v-else class="menu-title-placeholder"></div>
             <!-- 其他菜单内容 -->
           </div>
           <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" >
-          <icon icon="mdi:home" />
+          <Icon icon="mdi:home" />
           <span>{{ item.label }}</span>
         </el-menu-item>
 
@@ -119,11 +119,11 @@ function clickMenu(item:menuItem){
   background-color: #a9a1c5;
 }
 // 菜单不收起的样式
-.el-menu-vertical-demo:not(.el-menu--collapse) {
+.el-menu-vertical-demo:not(.el-menu--collapse){
   height: 100%;
   border-right: none;
   background-color: #a9a1c5;
-  width: 200px;
+  width: 149px ; 
   min-height: 400px;
 }
 .menu-title{

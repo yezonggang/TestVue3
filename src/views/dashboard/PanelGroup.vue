@@ -3,7 +3,8 @@ import { ElRow, ElCol, ElCard, ElSkeleton } from 'element-plus'
 import { CountTo } from '@/components/CountTo'
 import { useDesign } from '@/hooks/useDesign'
 import { useI18n } from '@/hooks/useI18n'
-import { ref, reactive } from 'vue'
+import { ref, reactive } from "vue"
+import {Icon} from '@/components/Icon' 
 
 const dataApi = reactive({
         code: 200,
@@ -66,16 +67,16 @@ getCount()
       <ElCard shadow="hover" class="mb-20px">
         <ElSkeleton :loading="loading" animated :rows="2">
           <template #default>
-            <div :class="`${prefixCls}__item flex justify-between`">
+            <div :class="`v-panel__item flex justify-between`">
               <div>
                 <div
-                  :class="`${prefixCls}__item--icon ${prefixCls}__item--peoples p-16px inline-block rounded-6px`"
+                  :class="`v-panel__item--icon v-panel__item--peoples p-16px inline-block rounded-6px`"
                 >
                   <Icon icon="svg-icon:peoples" :size="40" />
                 </div>
               </div>
               <div class="flex flex-col justify-between">
-                <div :class="`${prefixCls}__item--text text-16px text-gray-500 text-right`">{{
+                <div :class="`v-panel__item--text text-16px text-gray-500 text-right`">{{
                   t('analysis.newUser')
                 }}</div>
                 <CountTo
@@ -95,16 +96,16 @@ getCount()
       <ElCard shadow="hover" class="mb-20px">
         <ElSkeleton :loading="loading" animated :rows="2">
           <template #default>
-            <div :class="`${prefixCls}__item flex justify-between`">
+            <div :class="`v-panel__item flex justify-between`">
               <div>
                 <div
-                  :class="`${prefixCls}__item--icon ${prefixCls}__item--message p-16px inline-block rounded-6px`"
+                  :class="`v-panel__item--icon v-panel__item--message p-16px inline-block rounded-6px`"
                 >
                   <Icon icon="svg-icon:message" :size="40" />
                 </div>
               </div>
               <div class="flex flex-col justify-between">
-                <div :class="`${prefixCls}__item--text text-16px text-gray-500 text-right`">{{
+                <div :class="`v-panel__item--text text-16px text-gray-500 text-right`">{{
                   t('analysis.unreadInformation')
                 }}</div>
                 <CountTo
@@ -124,16 +125,16 @@ getCount()
       <ElCard shadow="hover" class="mb-20px">
         <ElSkeleton :loading="loading" animated :rows="2">
           <template #default>
-            <div :class="`${prefixCls}__item flex justify-between`">
+            <div :class="`v-panel__item flex justify-between`">
               <div>
                 <div
-                  :class="`${prefixCls}__item--icon ${prefixCls}__item--money p-16px inline-block rounded-6px`"
+                  :class="`v-panel__item--icon v-panel__item--money p-16px inline-block rounded-6px`"
                 >
                   <Icon icon="svg-icon:money" :size="40" />
                 </div>
               </div>
               <div class="flex flex-col justify-between">
-                <div :class="`${prefixCls}__item--text text-16px text-gray-500 text-right`">{{
+                <div :class="`v-panel__item--text text-16px text-gray-500 text-right`">{{
                   t('analysis.transactionAmount')
                 }}</div>
                 <CountTo
@@ -153,16 +154,16 @@ getCount()
       <ElCard shadow="hover" class="mb-20px">
         <ElSkeleton :loading="loading" animated :rows="2">
           <template #default>
-            <div :class="`${prefixCls}__item flex justify-between`">
+            <div :class="`v-panel__item flex justify-between`">
               <div>
                 <div
-                  :class="`${prefixCls}__item--icon ${prefixCls}__item--shopping p-16px inline-block rounded-6px`"
+                  :class="`v-panel__item--icon v-panel__item--shopping p-16px inline-block rounded-6px`"
                 >
                   <Icon icon="svg-icon:shopping" :size="40" />
                 </div>
               </div>
               <div class="flex flex-col justify-between">
-                <div :class="`${prefixCls}__item--text text-16px text-gray-500 text-right`">{{
+                <div :class="`v-panel__item--text text-16px text-gray-500 text-right`">{{
                   t('analysis.totalShopping')
                 }}</div>
                 <CountTo
@@ -181,9 +182,9 @@ getCount()
 </template>
 
 <style lang="scss" scoped>
-$prefix-cls: #{namespace}-panel;
+$prefix-cls: v-panel;
 
-.#{$prefix-cls} {
+.v-panel {
   &__item {
     &--peoples {
       color: #40c9c6;
@@ -204,19 +205,19 @@ $prefix-cls: #{namespace}-panel;
       ::v-deep(.#{namespace}-icon) {
         color: #fff !important;
       }
-      .#{$prefix-cls}__item--icon {
+      .v-panel__item--icon {
         transition: all 0.38s ease-out;
       }
-      .#{$prefix-cls}__item--peoples {
+      .v-panel__item--peoples {
         background: #40c9c6;
       }
-      .#{$prefix-cls}__item--message {
+      .v-panel__item--message {
         background: #36a3f7;
       }
-      .#{$prefix-cls}__item--money {
+      .v-panel__item--money {
         background: #f4516c;
       }
-      .#{$prefix-cls}__item--shopping {
+      .v-panel__item--shopping {
         background: #34bfa3;
       }
     }
