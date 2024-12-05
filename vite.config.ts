@@ -4,6 +4,8 @@ import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 import UnoCSS from "unocss/vite";
+import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
+import { resolve } from "path"; // 导入 resolve 函数
 const root = process.cwd();
 
 // https://vite.dev/config/
@@ -22,6 +24,11 @@ export default defineConfig(({ command, mode }) => {
       vue(),
       vueDevTools(),
       UnoCSS(),
+      VueI18nPlugin({
+        runtimeOnly: true,
+        compositionOnly: true,
+        include: [resolve(__dirname, "src/locales/**")],
+      }),
       // Icons({
       //   compiler: "vue3",
       //   autoInstall: true,

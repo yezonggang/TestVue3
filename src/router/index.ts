@@ -22,7 +22,7 @@ const router = createRouter({
           path: "/home/main",
           name: "main",
           //redirect: "/home/main",
-          component: () => import("@/views/main/index.vue"),
+          component: () => import("@/views/dashboard/index.vue"),
           children: [],
           meta: {
             label: "首页",

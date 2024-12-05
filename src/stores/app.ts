@@ -1,9 +1,7 @@
 import { defineStore } from "pinia";
 import { computed, reactive, toRefs } from "vue";
-import { setCssVar, humpToUnderline } from "../utils";
 import { ElMessage } from "element-plus";
 import { CACHE_KEY, useCache } from "@/hooks/useCache";
-import { type ElementPlusSize } from "../../types/elementPlus";
 
 const { wsCache } = useCache();
 
