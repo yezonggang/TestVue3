@@ -52,15 +52,15 @@ const mallLists = [
 ];
 
 const mallMock = {
-  getMallList: () => {
-    // console.log("params", params);
-    // const currentPage = params.currentPage;
-    // const pageSize = params.pageSize;
-    // const name = params.name;
-    // const desc = params.desc;
-    // const data = params.data;
+  getMallList: (params: any) => {
+    console.log("params", params);
+    const currentPage = parseInt(params.currentPage);
+    const pageSize = parseInt(params.pageSize);
+    const name = params.name;
+    const desc = params.desc;
+    const date = params.date;
     // 假设 mallLists 是一个包含所有商品的数组
-    // let filteredMalls = mallLists;
+    let filteredMalls = mallLists;
 
     // 根据关键词过滤
     // if (name) {
@@ -74,13 +74,14 @@ const mallMock = {
     // }
 
     // 分页
-    // const start = (currentPage - 1) * pageSize;
-    // const end = start + pageSize;
-    // const paginatedMalls = filteredMalls.slice(start, end);
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+    console.log("start", start, "end", end);
+    const paginatedMalls = filteredMalls.slice(start, end);
     return {
       code: 20000,
       data: {
-        mall: mallLists,
+        mall: paginatedMalls,
         total: mallLists.length,
       },
     };
