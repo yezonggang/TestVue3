@@ -72,9 +72,6 @@ importers:
       '@iconify/json':
         specifier: ^2.2.279
         version: 2.2.279
-      '@purge-icons/generated':
-        specifier: ^0.10.0
-        version: 0.10.0
       '@tsconfig/node22':
         specifier: ^22.0.0
         version: 22.0.0
@@ -114,9 +111,6 @@ importers:
       vite:
         specifier: ^5.4.10
         version: 5.4.11(@types/node@22.10.1)
-      vite-plugin-purge-icons:
-        specifier: ^0.10.0
-        version: 0.10.0(vite@5.4.11(@types/node@22.10.1))
       vite-plugin-vue-devtools:
         specifier: ^7.5.4
         version: 7.6.7(rollup@4.28.0)(vite@5.4.11(@types/node@22.10.1))(vue@3.5.13(typescript@5.6.3))
@@ -630,10 +624,6 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
-  '@iconify/iconify@2.1.2':
-    resolution: {integrity: sha512-QcUzFeEWkE/mW+BVtEGmcWATClcCOIJFiYUD/PiCWuTcdEA297o8D4oN6Ra44WrNOHu1wqNW4J0ioaDIiqaFOQ==}
-    deprecated: no longer maintained, switch to modern iconify-icon web component
-
   '@iconify/iconify@3.1.1':
     resolution: {integrity: sha512-1nemfyD/OJzh9ALepH7YfuuP8BdEB24Skhd8DXWh0hzcOxImbb1ZizSZkpCzAwSZSGcJFmscIBaBQu+yLyWaxQ==}
     deprecated: no longer maintained, switch to modern iconify-icon web component
@@ -759,12 +749,6 @@ packages:
 
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
-
-  '@purge-icons/core@0.10.0':
-    resolution: {integrity: sha512-AtJbZv5Yy+vWX5v32DPTr+CW7AkSK8HJx52orDbrYt/9s4lGM2t4KKAmwaTQEH2HYr2HVh1mlqs54/S1s3WT1g==}
-
-  '@purge-icons/generated@0.10.0':
-    resolution: {integrity: sha512-I+1yN7/yDy/eZzfhAZqKF8Z6FM8D/O1vempbPrHJ0m9HlZwvf8sWXOArPJ2qRQGB6mJUVSpaXkoGBuoz1GQX5A==}
 
   '@rollup/pluginutils@5.1.3':
     resolution: {integrity: sha512-Pnsb6f32CD2W3uCaLZIzDmeFyQ2b8UWMFI7xtwUezpcGBDVDW6y9XgAWIlARiGAo6eNF5FK5aQTr0LFyNyqq5A==}
@@ -1221,9 +1205,6 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@0.26.1:
-    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
-
   axios@1.7.9:
     resolution: {integrity: sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==}
 
@@ -1397,9 +1378,6 @@ packages:
   cors@2.8.5:
     resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
     engines: {node: '>= 0.10'}
-
-  cross-fetch@3.1.8:
-    resolution: {integrity: sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -2457,15 +2435,6 @@ packages:
   node-fetch-native@1.6.4:
     resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
 
-  node-fetch@2.7.0:
-    resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
-    engines: {node: 4.x || >=6.0.0}
-    peerDependencies:
-      encoding: ^0.1.0
-    peerDependenciesMeta:
-      encoding:
-        optional: true
-
   node-releases@2.0.18:
     resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
 
@@ -2769,10 +2738,6 @@ packages:
   rfdc@1.4.1:
     resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==}
 
-  rollup-plugin-purge-icons@0.10.0:
-    resolution: {integrity: sha512-GD2ftg4L9G/sagIhtCmBn5vdyzePOisniythubpbywP0Q3ix9rZuDeFvgXTPemOsc22pvH7t22ryYQIl0rwGog==}
-    engines: {node: '>= 12'}
-
   rollup@4.28.0:
     resolution: {integrity: sha512-G9GOrmgWHBma4YfCcX8PjH0qhXSdH8B4HDE2o4/jaxj93S4DPCIDoLcXz99eWMji4hB29UFCEd7B2gwGJDR9cQ==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
@@ -3009,9 +2974,6 @@ packages:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
 
-  tr46@0.0.3:
-    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
-
   traverse@0.6.10:
     resolution: {integrity: sha512-hN4uFRxbK+PX56DxYiGHsTn2dME3TVr9vbNqlQGcGcPhJAn+tdP126iA+TArMpI4YSgnTkMWyoLl5bf81Hi5TA==}
     engines: {node: '>= 0.4'}
@@ -3162,12 +3124,6 @@ packages:
       '@nuxt/kit':
         optional: true
 
-  vite-plugin-purge-icons@0.10.0:
-    resolution: {integrity: sha512-4fMJKQuBu9lAPJWjqGEytRaxty1pP9bWgQLA68dwbbaCXu6NBrOUb/3kMaUc7TP09kerEk+qTriCk05OZXpjwA==}
-    engines: {node: '>= 12'}
-    peerDependencies:
-      vite: '>=2'
-
   vite-plugin-svg-icons@2.0.1:
     resolution: {integrity: sha512-6ktD+DhV6Rz3VtedYvBKKVA2eXF+sAQVaKkKLDSqGUfnhqXl3bj5PPkVTl3VexfTuZy66PmINi8Q6eFnVfRUmA==}
     peerDependencies:
@@ -3271,14 +3227,8 @@ packages:
   web-storage-cache@1.1.1:
     resolution: {integrity: sha512-D0MieGooOs8RpsrK+vnejXnvh4OOv/+lTFB35JRkJJQt+uOjPE08XpaE0QBLMTRu47B1KGT/Nq3Gbag3Orinzw==}
 
-  webidl-conversions@3.0.1:
-    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
-
   webpack-virtual-modules@0.6.2:
     resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
-
-  whatwg-url@5.0.0:
-    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
 
   which-boxed-primitive@1.1.0:
     resolution: {integrity: sha512-Ei7Miu/AXe2JJ4iNF5j/UphAgRoma4trE6PtisM09bPygb3egMH3YLW/befsWb1A1AxvNSFidOFTB18XtnIIng==}
@@ -3751,12 +3701,6 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@iconify/iconify@2.1.2':
-    dependencies:
-      cross-fetch: 3.1.8
-    transitivePeerDependencies:
-      - encoding
-
   '@iconify/iconify@3.1.1':
     dependencies:
       '@iconify/types': 2.0.0
@@ -3933,21 +3877,6 @@ snapshots:
   '@pkgr/core@0.1.1': {}
 
   '@polka/url@1.0.0-next.28': {}
-
-  '@purge-icons/core@0.10.0':
-    dependencies:
-      '@iconify/iconify': 2.1.2
-      axios: 0.26.1(debug@4.3.7)
-      debug: 4.3.7
-      fast-glob: 3.3.2
-      fs-extra: 10.1.0
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-
-  '@purge-icons/generated@0.10.0':
-    dependencies:
-      '@iconify/iconify': 3.1.1
 
   '@rollup/pluginutils@5.1.3(rollup@4.28.0)':
     dependencies:
@@ -4493,15 +4422,9 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axios@0.26.1(debug@4.3.7):
-    dependencies:
-      follow-redirects: 1.15.9(debug@4.3.7)
-    transitivePeerDependencies:
-      - debug
-
   axios@1.7.9:
     dependencies:
-      follow-redirects: 1.15.9(debug@4.3.7)
+      follow-redirects: 1.15.9
       form-data: 4.0.1
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -4706,12 +4629,6 @@ snapshots:
     dependencies:
       object-assign: 4.1.1
       vary: 1.1.2
-
-  cross-fetch@3.1.8:
-    dependencies:
-      node-fetch: 2.7.0
-    transitivePeerDependencies:
-      - encoding
 
   cross-spawn@7.0.6:
     dependencies:
@@ -5241,9 +5158,7 @@ snapshots:
 
   flatted@3.3.2: {}
 
-  follow-redirects@1.15.9(debug@4.3.7):
-    optionalDependencies:
-      debug: 4.3.7
+  follow-redirects@1.15.9: {}
 
   for-each@0.3.3:
     dependencies:
@@ -5871,10 +5786,6 @@ snapshots:
 
   node-fetch-native@1.6.4: {}
 
-  node-fetch@2.7.0:
-    dependencies:
-      whatwg-url: 5.0.0
-
   node-releases@2.0.18: {}
 
   normalize-path@3.0.0: {}
@@ -6164,14 +6075,6 @@ snapshots:
   reusify@1.0.4: {}
 
   rfdc@1.4.1: {}
-
-  rollup-plugin-purge-icons@0.10.0:
-    dependencies:
-      '@purge-icons/core': 0.10.0
-      '@purge-icons/generated': 0.10.0
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
 
   rollup@4.28.0:
     dependencies:
@@ -6466,8 +6369,6 @@ snapshots:
 
   totalist@3.0.1: {}
 
-  tr46@0.0.3: {}
-
   traverse@0.6.10:
     dependencies:
       gopd: 1.2.0
@@ -6684,16 +6585,6 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-purge-icons@0.10.0(vite@5.4.11(@types/node@22.10.1)):
-    dependencies:
-      '@purge-icons/core': 0.10.0
-      '@purge-icons/generated': 0.10.0
-      rollup-plugin-purge-icons: 0.10.0
-      vite: 5.4.11(@types/node@22.10.1)
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-
   vite-plugin-svg-icons@2.0.1(vite@5.4.11(@types/node@22.10.1)):
     dependencies:
       '@types/svgo': 2.6.4
@@ -6795,14 +6686,7 @@ snapshots:
 
   web-storage-cache@1.1.1: {}
 
-  webidl-conversions@3.0.1: {}
-
   webpack-virtual-modules@0.6.2: {}
-
-  whatwg-url@5.0.0:
-    dependencies:
-      tr46: 0.0.3
-      webidl-conversions: 3.0.1
 
   which-boxed-primitive@1.1.0:
     dependencies:

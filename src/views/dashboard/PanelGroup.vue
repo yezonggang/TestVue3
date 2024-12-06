@@ -4,7 +4,6 @@ import { CountTo } from '@/components/CountTo'
 import { useDesign } from '@/hooks/useDesign'
 import { useI18n } from '@/hooks/useI18n'
 import { ref, reactive } from "vue"
-import {Icon} from '@/components/Icon' 
 
 const dataApi = reactive({
         code: 200,
@@ -72,7 +71,7 @@ getCount()
                 <div
                   :class="`v-panel__item--icon v-panel__item--peoples p-16px inline-block rounded-6px`"
                 >
-                  <Icon icon="svg-icon:peoples" :size="40" />
+                  <Icons icon="svg-icon:peoples" :size="40" />
                 </div>
               </div>
               <div class="flex flex-col justify-between">
@@ -101,7 +100,7 @@ getCount()
                 <div
                   :class="`v-panel__item--icon v-panel__item--message p-16px inline-block rounded-6px`"
                 >
-                  <Icon icon="svg-icon:message" :size="40" />
+                  <Icons icon="svg-icon:message" :size="40" />
                 </div>
               </div>
               <div class="flex flex-col justify-between">
@@ -130,7 +129,7 @@ getCount()
                 <div
                   :class="`v-panel__item--icon v-panel__item--money p-16px inline-block rounded-6px`"
                 >
-                  <Icon icon="svg-icon:money" :size="40" />
+                  <Icons icon="svg-icon:money" :size="40" />
                 </div>
               </div>
               <div class="flex flex-col justify-between">
@@ -159,7 +158,7 @@ getCount()
                 <div
                   :class="`v-panel__item--icon v-panel__item--shopping p-16px inline-block rounded-6px`"
                 >
-                  <Icon icon="svg-icon:shopping" :size="40" />
+                  <Icons icon="svg-icon:shopping" :size="40" />
                 </div>
               </div>
               <div class="flex flex-col justify-between">
@@ -182,9 +181,9 @@ getCount()
 </template>
 
 <style lang="scss" scoped>
-$prefix-cls: v-panel;
+$prefix-cls: #{global.$namespace}-panel;
 
-.v-panel {
+.#{$prefix-cls} {
   &__item {
     &--peoples {
       color: #40c9c6;
@@ -201,23 +200,29 @@ $prefix-cls: v-panel;
     &--shopping {
       color: #34bfa3;
     }
+
     &:hover {
-      ::v-deep(.#{namespace}-icon) {
+      ::v-deep(.#{global.$namespace}-icon) {
         color: #fff !important;
       }
-      .v-panel__item--icon {
+
+      .#{$prefix-cls}__item--icon {
         transition: all 0.38s ease-out;
       }
-      .v-panel__item--peoples {
+
+      .#{$prefix-cls}__item--peoples {
         background: #40c9c6;
       }
-      .v-panel__item--message {
+
+      .#{$prefix-cls}__item--message {
         background: #36a3f7;
       }
-      .v-panel__item--money {
+
+      .#{$prefix-cls}__item--money {
         background: #f4516c;
       }
-      .v-panel__item--shopping {
+
+      .#{$prefix-cls}__item--shopping {
         background: #34bfa3;
       }
     }

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import {ref,unref,reactive,computed,watch,nextTick} from 'vue'
+import {ref,unref,computed,watch,nextTick} from 'vue'
 import { propTypes } from '@/utils/propTypes'
 import Iconify from '@iconify/iconify'
 import { useDesign } from '@/hooks/useDesign'
 
-defineOptions({ name: 'Icon' })
+defineOptions({ name: 'Icons' })
 
 const { getPrefixCls } = useDesign()
 

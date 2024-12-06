@@ -2,10 +2,10 @@
 import "./assets/style.css";
 // 引入unocss css
 import "virtual:uno.css";
-import { createApp } from "vue";
-import { createPinia } from "pinia";
 // 导入全局的svg图标
-import "@/plugins/svgIcon";
+import "virtual:svg-icons-register";
+// import "@purge-icons/generated";
+
 // 引入elment-plus和样式
 import ElementPlus from "element-plus";
 import "element-plus/theme-chalk/index.css";
@@ -18,6 +18,8 @@ import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import "@/styles/index.scss";
 // 初始化多语言
 import { setupI18n } from "@/plugins/vueI18n";
+import { createApp } from "vue";
+import { createPinia } from "pinia";
 
 // 把Icon注册成全局组件
 import { setupGlobCom } from "@/components";

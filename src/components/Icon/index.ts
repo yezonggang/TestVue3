@@ -1,7 +1,3 @@
-import Icon from "./src/Icon.vue";
-//import IconSelect from './src/IconSelect.vue'
+import Icons from "./src/Icons.vue";
 
-export {
-  Icon,
-  // IconSelect
-};
+export { Icons };

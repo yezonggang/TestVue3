@@ -7,7 +7,7 @@ import UnoCSS from "unocss/vite";
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
 import { resolve } from "path"; // 导入 resolve 函数
 const root = process.cwd();
-import PurgeIcons from "vite-plugin-purge-icons";
+// import PurgeIcons from "vite-plugin-purge-icons";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 // 定义路径解析函数
@@ -51,8 +51,19 @@ export default defineConfig(({ command, mode }) => {
         svgoOptions: true,
       }),
       // 使用 Purge Icons 插件
-      PurgeIcons(),
+      // PurgeIcons({
+      //   /* PurgeIcons Options */
+      // }),
     ],
+    // 定义namespace的名称全局使用不然不生效,全局使用时候使用global.$namespace来调用
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "./src/styles/global.module.scss";',
+          javascriptEnabled: true,
+        },
+      },
+    },
     resolve: {
       // 配置模块解析别名
       alias: {

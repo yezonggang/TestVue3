@@ -12,14 +12,14 @@
             <!-- 其他菜单内容 -->
           </div>
           <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" >
-          <Icon icon="mdi:home" />
+          <Icons icon="mdi:home" />
           <span>{{ item.label }}</span>
         </el-menu-item>
 
         <!-- 带有子路由的menu -->
         <el-sub-menu v-for="item in hasChildren(fakeMenu)">
           <template #title>
-            <el-icon><location /></el-icon>
+            <Icons icon="ep:aim" />
             <span>{{item.label}}</span>
           </template>
           <!-- 针对子路由循环 -->
@@ -35,7 +35,7 @@
 import { ref,onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import router from '@/router';
-import { Icon } from '@iconify/vue';
+// import { Icon } from '@iconify/vue';
 import useMenuStore from '@/stores/useMenu';
 const useMenu = useMenuStore()
 // onMounted(()=>{
