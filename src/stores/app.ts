@@ -176,14 +176,14 @@ export const useAppStore = defineStore("app", () => {
     setPageLoading(pageLoading: boolean) {
       state.pageLoading = pageLoading;
     },
-    setLayout(layout: LayoutType) {
-      if (state.mobile && layout !== "classic") {
-        ElMessage.warning("移动端模式下不支持切换其他布局");
-        return;
-      }
-      state.layout = layout;
-      wsCache.set(CACHE_KEY.LAYOUT, state.layout);
-    },
+    // setLayout(layout: LayoutType) {
+    //   if (state.mobile && layout !== "classic") {
+    //     ElMessage.warning("移动端模式下不支持切换其他布局");
+    //     return;
+    //   }
+    //   state.layout = layout;
+    //   wsCache.set(CACHE_KEY.LAYOUT, state.layout);
+    // },
     setTitle(title: string) {
       state.title = title;
     },

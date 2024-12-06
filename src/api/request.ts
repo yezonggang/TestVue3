@@ -34,24 +34,6 @@ axiosInstance.interceptors.response.use(
     // 对响应错误做点什么，比如显示错误消息
     if (error.response) {
       switch (error.response.status) {
-        case 401:
-          // 未授权，重定向到登录页
-          ElMessage.error("未授权，请登录");
-          break;
-        case 403:
-          // 禁止访问
-          ElMessage.error("禁止访问");
-          break;
-        case 404:
-          // 资源未找到
-          ElMessage.error("资源未找到");
-          break;
-        case 500:
-          // 服务器错误
-          ElMessage.error("服务器错误");
-          break;
-        default:
-          ElMessage.error("其他错误");
       }
     }
     return Promise.reject(error);
