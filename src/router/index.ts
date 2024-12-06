@@ -41,6 +41,17 @@ const router = createRouter({
           },
         },
         {
+          path: "/home/nested",
+          name: "nested",
+          //redirect: "/home/main",
+          component: () => import("@/views/nestedTable/index.vue"),
+          children: [],
+          meta: {
+            label: "嵌套表格",
+            icon: "video-play",
+          },
+        },
+        {
           path: "/home/user",
           name: "user",
           //redirect: "/home/main",

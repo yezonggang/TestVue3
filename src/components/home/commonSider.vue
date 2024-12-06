@@ -58,6 +58,12 @@ const fakeMenu = ref<menuItem[]>([
             icon: 'home',
           },
           {
+            path: '/home/nested',
+            name: 'nested',
+            label: '嵌套表格',
+            icon: 'home',
+          },
+          {
             path: '/home/user',
             name: 'user',
             label: '用户管理',
