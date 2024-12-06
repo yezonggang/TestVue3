@@ -93,7 +93,6 @@ getCount()
 
     <ElCol :xl="6" :lg="6" :md="12" :sm="12" :xs="24">
       <ElCard shadow="hover" class="mb-20px">
-        <ElSkeleton :loading="loading" animated :rows="2">
           <template #default>
             <div :class="`v-panel__item flex justify-between`">
               <div>
@@ -116,13 +115,11 @@ getCount()
               </div>
             </div>
           </template>
-        </ElSkeleton>
       </ElCard>
     </ElCol>
 
     <ElCol :xl="6" :lg="6" :md="12" :sm="12" :xs="24">
       <ElCard shadow="hover" class="mb-20px">
-        <ElSkeleton :loading="loading" animated :rows="2">
           <template #default>
             <div :class="`v-panel__item flex justify-between`">
               <div>
@@ -145,13 +142,11 @@ getCount()
               </div>
             </div>
           </template>
-        </ElSkeleton>
       </ElCard>
     </ElCol>
 
     <ElCol :xl="6" :lg="6" :md="12" :sm="12" :xs="24">
       <ElCard shadow="hover" class="mb-20px">
-        <ElSkeleton :loading="loading" animated :rows="2">
           <template #default>
             <div :class="`v-panel__item flex justify-between`">
               <div>
@@ -174,7 +169,6 @@ getCount()
               </div>
             </div>
           </template>
-        </ElSkeleton>
       </ElCard>
     </ElCol>
   </ElRow>

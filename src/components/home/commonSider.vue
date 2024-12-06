@@ -11,7 +11,7 @@
           <div v-else class="menu-title-placeholder"></div>
             <!-- 其他菜单内容 -->
           </div>
-          <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" >
+          <el-menu-item @click="clickMenu(item)"  v-for="item in hasNoChildren(fakeMenu)" id="menu-item" >
           <Icons icon="mdi:home" />
           <span>{{ item.label }}</span>
         </el-menu-item>
