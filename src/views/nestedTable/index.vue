@@ -97,12 +97,12 @@
 <script lang="ts" setup>
 import { reactive, ref, onMounted } from 'vue'
 import type { ComponentSize } from 'element-plus'
-import { type mallList, getMallList } from '@/api/mall'
+import { type nestedItem, getNestedList } from '@/api/nestedTable'
 
 const currentPage = ref(1)
 const pageSize = ref(20)
 const size = ref<ComponentSize>('default')
-const tableData = ref<mallList[]>([])
+const tableData = ref<nestedItem[]>([])
 const total = ref(0)
 const dialogVisible = ref(false)
 
@@ -131,7 +131,7 @@ const fetchMallList = () => {
   queryParams.desc = formInline.region
   queryParams.date = formInline.date
 
-  getMallList(queryParams).then((res: any) => {
+  getNestedList(queryParams).then((res: any) => {
     if (res.code === 20000) {
       console.log('success....' + res.data.total)
       tableData.value = res.data.mall
@@ -139,7 +139,7 @@ const fetchMallList = () => {
     }
   })
 }
-const handleEdit = (row: mallList) => {
+const handleEdit = (row: nestedItem) => {
   Object.assign(editForm, row)
   dialogVisible.value = true
 }

@@ -1,5 +1,4 @@
 import request from "@/api/request";
-import { pa } from "element-plus/es/locale/index.mjs";
 
 export interface mallList {
   id?: number;
@@ -12,7 +11,6 @@ export interface mallList {
   zip?: string;
   tag?: string;
 }
-
 export function getMallList(params: any) {
   return request({
     url: "/mall/list",

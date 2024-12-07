@@ -1,4 +1,4 @@
-import { getMallList } from "@/api/mall";
+import { getMallList } from "@/api/tables";
 
 const mallLists = [
   { id: 1, price: 19.99, desc: "Product Description 1", date: "2023-10-01", name: "Product 1", address: "Address 1", stock: "10", zip: "100001", tag: "Tag 1" },

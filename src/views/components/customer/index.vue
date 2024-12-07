@@ -1,5 +1,5 @@
 <template>
-    address
+    其他组件
 </template>
 
 <script lang="ts" setup>  </script>

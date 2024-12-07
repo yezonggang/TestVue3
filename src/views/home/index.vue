@@ -29,7 +29,7 @@ import commonHeader from "../../components/home/commonHeader.vue";
 <style lang="scss" scoped>
 .common-layout {
   height: 100%;
-  border:none
+  border:none;
 }
 
 .my-common-header{
@@ -42,6 +42,7 @@ import commonHeader from "../../components/home/commonHeader.vue";
 //   height: 100%;
 //   border-right: none;
 //   background-color: #a9a1c5;
+//   flex-shrink: 0;
 // }
 
 </style>

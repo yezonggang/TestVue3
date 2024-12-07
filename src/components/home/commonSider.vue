@@ -46,15 +46,15 @@ const {isCollapse} = storeToRefs(useMenu)
 
 const fakeMenu = ref<menuItem[]>([
           {
-            path: '/home/main',
-            name: 'main',
-            label: '首页',
+            path: '/home/dashboard',
+            name: 'dashboard',
+            label: '统计面板',
             icon: 'home',
           },
           {
-            path: '/home/mall',
-            name: 'mall',
-            label: '商品管理',
+            path: '/home/tables',
+            name: 'tables',
+            label: '简单表格',
             icon: 'home',
           },
           {
@@ -64,27 +64,27 @@ const fakeMenu = ref<menuItem[]>([
             icon: 'home',
           },
           {
-            path: '/home/user',
-            name: 'user',
-            label: '用户管理',
+            path: '/home/tabs',
+            name: 'tabs',
+            label: '标签表格',
             icon: 'home',
           },
           {
-            label: '标签维护',
-            path: '/home/tabs',
-            name: 'tabs',
+            label: '组件',
+            path: '/home/components',
+            name: 'components',
             icon: 'home',
             children: [
               {
-                path: '/address',
-                name: 'address',
-                label: '地址管理',
+                path: '/editor',
+                name: 'editor',
+                label: '文本编辑',
                 icon: 'setting',
               },
               {
                 path: '/customer',
                 name: 'customer',
-                label: '客户管理',
+                label: '其他组件',
                 icon: 'setting',
               }
             ]
@@ -109,10 +109,6 @@ function clickMenu(item:menuItem){
   router.push({name:item.name})
   console.log(item)
 }
-
-
-
-
 </script>
 
 
@@ -123,13 +119,15 @@ function clickMenu(item:menuItem){
   height: 100%;
   border-right: none;
   background-color: #a9a1c5;
+  // 不加这个菜单中的统计面板页会挤压el-menu
+  flex-shrink: 0; 
 }
 // 菜单不收起的样式
 .el-menu-vertical-demo:not(.el-menu--collapse){
   height: 100%;
   border-right: none;
   background-color: #a9a1c5;
-  width: 149px ; 
+  width: 150px ; 
   min-height: 400px;
 }
 .menu-title{

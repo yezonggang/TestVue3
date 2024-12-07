@@ -74,7 +74,7 @@ function login(){
                 //menuStore.setMenu(menuList1.data.menu)
                 //menuStore.setRouter();
             })
-            router.push({ name: 'main' })
+            router.push({ name: 'dashboard' })
         }else{
             //alert("登录失败")
             console.log("登录失败")

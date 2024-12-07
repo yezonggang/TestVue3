@@ -97,7 +97,7 @@
 <script lang="ts" setup>
 import { reactive, ref, onMounted } from 'vue'
 import type { ComponentSize } from 'element-plus'
-import { type mallList, getMallList } from '@/api/mall'
+import { type mallList, getMallList } from '@/api/tables'
 
 const currentPage = ref(1)
 const pageSize = ref(20)
