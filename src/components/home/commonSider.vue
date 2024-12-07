@@ -70,6 +70,12 @@ const fakeMenu = ref<menuItem[]>([
             icon: 'home',
           },
           {
+            path: '/home/fathers',
+            name: 'father',
+            label: '父子组件',
+            icon: 'home',
+          },
+          {
             label: '组件',
             path: '/home/components',
             name: 'components',

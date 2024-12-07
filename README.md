@@ -17,9 +17,9 @@
 
 ## 总结
 
-1. 使用 ref 和 defineExpose
-   父组件：通过 ref 定义一个引用，然后使用 ref.value 调用子组件通过 defineExpose 暴露的方法或属性。
-   子组件：使用 defineExpose 暴露需要被父组件访问的方法或属性。
+1. 使用 props 传递数据
+   父组件：通过 props 传递数据给子组件。
+   子组件：通过 defineProps 获取父组件定义的数据。。
 
 2. 使用 v-model 语法糖
    父组件：通过 v-model="abc" 传递数据，并监听子组件的更新事件。
@@ -28,9 +28,9 @@
 3. 使用 @ 传递
    父组件：通过@funName 绑定事件，并监听子组件的更新事件。
    子组件：通过 defineEmits 获取父传入的事件 funName，并使用 $emit 触发更新事件。
-4. 使用 props 传递数据
-   父组件：通过 props 传递数据给子组件。
-   子组件：通过 defineProps 获取父组件定义的数据。
+4. 使用 ref 和 defineExpose
+   父组件：通过 ref 定义一个引用，然后使用 ref.value 调用子组件通过 defineExpose 暴露的方法或属性。
+   子组件：使用 defineExpose 暴露需要被父组件访问的方法或属性
 
 5. 使用 Pinia 或 Vuex 进行状态管理
    父组件：通过 Pinia 或 Vuex 访问和修改全局状态。

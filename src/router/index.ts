@@ -63,6 +63,17 @@ const router = createRouter({
           },
         },
         {
+          path: "/home/fatherSon",
+          name: "father",
+          //redirect: "/home/main",
+          component: () => import("@/views/fatherSon/index.vue"),
+          children: [],
+          meta: {
+            label: "标签表格",
+            icon: "video-play",
+          },
+        },
+        {
           path: "/home/components",
           name: "components",
           //redirect: "/home/main",
