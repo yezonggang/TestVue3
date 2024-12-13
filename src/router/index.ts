@@ -74,33 +74,26 @@ const router = createRouter({
           },
         },
         {
-          path: "/home/components",
-          name: "components",
+          path: "/home/draggable",
+          name: "draggable",
           //redirect: "/home/main",
-          children: [
-            {
-              path: "/home/components/editor",
-              name: "editor",
-              //redirect: "/home/main",
-              component: () => import("@/views/components/editor/index.vue"),
-              children: [],
-              meta: {
-                label: "富文本编辑",
-                icon: "video-play",
-              },
-            },
-            {
-              path: "/home/components/customer",
-              name: "customer",
-              //redirect: "/home/main",
-              component: () => import("@/views/components/customer/index.vue"),
-              children: [],
-              meta: {
-                label: "其他组件",
-                icon: "video-play",
-              },
-            },
-          ],
+          component: () => import("@/components/Draggable/index.vue"),
+          children: [],
+          meta: {
+            label: "拖拽组件",
+            icon: "video-play",
+          },
+        },
+        {
+          path: "/home/customer",
+          name: "customer",
+          //redirect: "/home/main",
+          component: () => import("@/views/components/customer/index.vue"),
+          children: [],
+          meta: {
+            label: "其他组件",
+            icon: "video-play",
+          },
         },
       ],
     },
