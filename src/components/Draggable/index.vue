@@ -1,26 +1,36 @@
 <template>
-  <div class="itxst">
-    <h3>拖拽区域A</h3>
-
-    <div style="background-color: azure">
-      <vuedraggable :list="list" ghost-class="ghost" group="test" chosen-class="chose" animation="300" @start="onStart" @end="onEnd">
-        <template #item="{ element }">
-          <ul style="list-style-type: circle">
-            <li style="margin: 20px 20px">
-              <Icons :icon="element.icon" />
-            </li>
-          </ul>
-        </template>
-      </vuedraggable>
-    </div>
-    <div>
-      <hr />
-      <h3>拖拽区域B</h3>
-      <vuedraggable :list="list2" ghost-class="ghost" group="test" chosen-class="chose" animation="300" @start="onStart" @end="onEnd">
-        <template #item="{ element }">
-          <bear :element="element" />
-        </template>
-      </vuedraggable>
+  <h3>区域A</h3>
+  <vuedraggable :list="list" ghost-class="ghost" group="test" chosen-class="chose" animation="300" @start="onStart" @end="onEnd" class="myDraggableA">
+    <template #item="{ element }">
+      <el-card :key="element.id" style="width: 70px" shadow="hover">
+        <Icons :icon="element.icon" :size="30" />
+      </el-card>
+    </template>
+  </vuedraggable>
+  <hr />
+  <h3>区域B</h3>
+  <div class="flex justify-between">
+    <vuedraggable :list="list2" ghost-class="ghost" group="test" chosen-class="chose" animation="300" @start="onStart" @end="onEnd">
+      <template #item="{ element }">
+        <bear :element="element" @click="selectElement(element)" />
+      </template>
+    </vuedraggable>
+    <div class="w-480px h-400px">
+      <h3>修改属性</h3>
+      <el-form v-if="selectedElement" label-width="80px">
+        <el-form-item label="名称" class="mt-20px">
+          <el-input v-model="selectedElement.name" placeholder="修改名称"></el-input>
+        </el-form-item>
+        <el-form-item label="标签">
+          <el-input v-model="selectedElement.tag" placeholder="修改标签"></el-input>
+        </el-form-item>
+        <el-form-item label="图标">
+          <el-input v-model="selectedElement.icon" placeholder="修改图标"></el-input>
+        </el-form-item>
+        <el-form-item label="主人">
+          <el-input v-model="selectedElement.owner" placeholder="修改所有者"></el-input>
+        </el-form-item>
+      </el-form>
     </div>
   </div>
 </template>
@@ -47,6 +57,7 @@ interface Item {
   tag: string;
   icon: string;
   id: number;
+  owner?: string;
 }
 
 //需要拖拽的数据，拖拽后数据的顺序也会变化[
@@ -59,11 +70,16 @@ const list = reactive<Item[]>([
 ]);
 
 const list2 = reactive<Item[]>([
-  { name: "狗", tag: "dog", icon: "mdi:dog-side", id: 0 },
-  { name: "泰迪熊", tag: "bear", icon: "mdi:teddy-bear", id: 1 },
-  { name: "飞机", tag: "plane", icon: "mdi:airplane-settings", id: 2 },
-  { name: "人类", tag: "human", icon: "mdi:account", id: 3 },
+  { name: "猫", tag: "cat", icon: "mdi:cat", id: 0, owner: "小明" },
+  { name: "鸟", tag: "bird", icon: "mdi:bird", id: 1, owner: "小红" },
+  { name: "水", tag: "water", icon: "mdi:water", id: 2, owner: "小白" },
+  { name: "花儿", tag: "flower", icon: "mdi:flower", id: 3, owner: "小刚" },
 ]);
+
+const selectedElement = ref<Item | null>(null);
+const selectElement = (element: Item) => {
+  selectedElement.value = element;
+};
 
 //拖拽开始的事件
 const onStart = () => {
@@ -86,10 +102,9 @@ const onEnd = () => {
   background: #c8ebfb;
   border: 1px dashed #007bff;
 }
-
-// .chose {
-//   opacity: 0.5;
-//   background: #d1c373;
-//   border: 1px dashed #b5d362;
-// }
+.myDraggableA {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 </style>
