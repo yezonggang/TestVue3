@@ -1,6 +1,12 @@
 @import "./var.css";
 // @import './FormCreate/index.scss';
 @import "element-plus/theme-chalk/dark/css-vars.css";
+/* these are necessary styles for vue flow */
+@import "@vue-flow/core/dist/style.css";
+/* import the default theme (optional) */
+@import "@vue-flow/core/dist/theme-default.css";
+@import "@vue-flow/controls/dist/style.css";
+@import "@vue-flow/minimap/dist/style.css";
 // 不在useDesign中引入?
 // @import "./global.moudle.scss";
 

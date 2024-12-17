@@ -1,9 +1,5 @@
-<template>
-    user
-</template>
+<template>user</template>
 
-<script lang="ts" setup>  </script>
+<script lang="ts" setup></script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

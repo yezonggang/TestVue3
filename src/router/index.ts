@@ -77,7 +77,7 @@ const router = createRouter({
           path: "/home/draggable",
           name: "draggable",
           //redirect: "/home/main",
-          component: () => import("@/components/Draggable/index.vue"),
+          component: () => import("@/views/others/draggable/index.vue"),
           children: [],
           meta: {
             label: "拖拽组件",
@@ -85,10 +85,10 @@ const router = createRouter({
           },
         },
         {
-          path: "/home/customer",
-          name: "customer",
+          path: "/home/flow",
+          name: "flow",
           //redirect: "/home/main",
-          component: () => import("@/views/components/customer/index.vue"),
+          component: () => import("@/views/others/flow/index.vue"),
           children: [],
           meta: {
             label: "其他组件",

@@ -68,9 +68,9 @@ const fakeMenu = ref<menuItem[]>([
     icon: "home",
   },
   {
-    label: "组件",
-    path: "/home/components",
-    name: "components",
+    label: "其他组件",
+    path: "/home/others",
+    name: "others",
     icon: "home",
     children: [
       {
@@ -80,9 +80,9 @@ const fakeMenu = ref<menuItem[]>([
         icon: "home",
       },
       {
-        path: "/customer",
-        name: "customer",
-        label: "其他组件",
+        path: "/flow",
+        name: "flow",
+        label: "流程组件",
         icon: "home",
       },
     ],
