@@ -53,3 +53,7 @@
    draw.io: 开源的编排工具，可以自己部署
    https://www.drawio.com/
    https://github.com/jgraph/drawio?spm=5176.28103460.0.0.10a65d27yk6jnG
+   drawflow:开源流程设计器，可用于轻松快速地创建数据流。
+   https://github.com/jerosoler/Drawflow/tree/master/docs
+   workflow-bpmn-modeler:结合工作流的
+   https://github.com/Nayacco/workflow-bpmn-modeler/blob/master/README_CN.md

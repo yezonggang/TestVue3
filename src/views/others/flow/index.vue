@@ -8,11 +8,13 @@
     <Controls />
 
     <!-- bind your custom node type to a component by using slots, slot names are always `node-<type>` -->
+    <!-- 如果special节点有多个这里是遍历进行渲染的，这样的话同类的node就可以定制化开发了，比如有些special节点增加特定的点击事件，有些节点只有出的handle没有入的之类的 -->
     <template #node-special="specialNodeProps">
-      <SpecialNode v-bind="specialNodeProps" class="vue-flow__node-custom" />
+      <SpecialNode v-bind="specialNodeProps" />
     </template>
 
     <!-- bind your custom edge type to a component by using slots, slot names are always `edge-<type>` -->
+    <!-- 如果special的连接线有多个这里也是遍历进行渲染的 -->
     <template #edge-special="specialEdgeProps">
       <SpecialEdge v-bind="specialEdgeProps" />
     </template>
@@ -79,6 +81,15 @@ const nodes = ref<Node[]>([
       hello: "world",
     },
   },
+  {
+    id: "5",
+    type: "special", // 使用相同的 type
+    position: { x: 600, y: 450 },
+    data: {
+      label: "Node 5",
+      message: "Hello, VueFlow!",
+    },
+  },
 ]);
 
 // these are our edges
@@ -106,6 +117,17 @@ const edges = ref<Edge[]>([
     type: "special",
     source: "3",
     target: "4",
+
+    // all edges can have a data object containing any data you want to pass to the edge
+    data: {
+      hello: "world",
+    },
+  },
+  {
+    id: "e4->5",
+    type: "special",
+    source: "4",
+    target: "5",
 
     // all edges can have a data object containing any data you want to pass to the edge
     data: {
