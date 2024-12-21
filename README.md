@@ -57,3 +57,7 @@
    https://github.com/jerosoler/Drawflow/tree/master/docs
    workflow-bpmn-modeler:结合工作流的
    https://github.com/Nayacco/workflow-bpmn-modeler/blob/master/README_CN.md
+   logicflow:didi 开源的流程图组件
+   https://logic-flow.cn/
+   github:https://github.com/didi/LogicFlow
+   bpm 图变 xml：https://gitee.com/cai_xiao_feng/lowflow-design

@@ -87,8 +87,17 @@ const router = createRouter({
         {
           path: "/home/flow",
           name: "flow",
-          //redirect: "/home/main",
-          component: () => import("@/views/others/flow/index.vue"),
+          component: () => import("@/views/others/vueFlow/index.vue"),
+          children: [],
+          meta: {
+            label: "其他组件",
+            icon: "video-play",
+          },
+        },
+        {
+          path: "/home/logic",
+          name: "logic",
+          component: () => import("@/views/others/logicFlow/index.vue"),
           children: [],
           meta: {
             label: "其他组件",

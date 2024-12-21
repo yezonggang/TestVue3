@@ -6,6 +6,12 @@
 @import "@vue-flow/core/dist/theme-default.css";
 @import "@vue-flow/controls/dist/style.css";
 @import "@vue-flow/minimap/dist/style.css";
+@import "@vue-flow/node-resizer/dist/style.css";
+
+// logic-flow的样式
+@import "@logicflow/core/lib/style/index.css";
+@import "@logicflow/extension/lib/style/index.css";
+
 @import "./var.css";
 
 // 不在useDesign中引入?

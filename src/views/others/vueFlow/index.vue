@@ -34,8 +34,8 @@ import { Background } from "@vue-flow/background";
 
 // these components are only shown as examples of how to use a custom node or edge
 // you can find many examples of how to create these custom components in the examples page of the docs
-import SpecialNode from "@/components/Flow/SpecialNode.vue";
-import SpecialEdge from "@/components/Flow/SpecialEdge.vue";
+import SpecialNode from "@/components/VueFlow/SpecialNode.vue";
+import SpecialEdge from "@/components/VueFlow/SpecialEdge.vue";
 const { addNodes, onConnect, addEdges } = useVueFlow();
 
 onConnect((params) => {
@@ -155,9 +155,10 @@ function logEvent(name: string, data: any) {
 
 <style>
 /* Use a purple theme for our custom node */
-/* .vue-flow__node-custom {
+/* 默认这里就会生效因为class名默认是vue-flow加上的，就叫vue-flow__node-special，不需要在node上手动指定 */
+/* .vue-flow__node-special {
   background: purple;
-  color: white;
+  color: rgb(44, 196, 94);
   border: 1px solid purple;
   border-radius: 4px;
   box-shadow: 0 0 0 1px purple;

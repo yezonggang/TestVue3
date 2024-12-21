@@ -85,6 +85,12 @@ const fakeMenu = ref<menuItem[]>([
         label: "流程组件",
         icon: "home",
       },
+      {
+        path: "/logic",
+        name: "logic",
+        label: "流程组件2",
+        icon: "home",
+      },
     ],
   },
 ]);
