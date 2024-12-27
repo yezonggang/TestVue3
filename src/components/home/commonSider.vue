@@ -76,19 +76,19 @@ const fakeMenu = ref<menuItem[]>([
       {
         path: "/draggable",
         name: "draggable",
-        label: "拖拽组件",
+        label: "draggable组件",
         icon: "home",
       },
       {
         path: "/flow",
         name: "flow",
-        label: "流程组件",
+        label: "vue-flow组件",
         icon: "home",
       },
       {
         path: "/logic",
         name: "logic",
-        label: "流程组件2",
+        label: "logicFlow组件",
         icon: "home",
       },
     ],
