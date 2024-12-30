@@ -2,7 +2,7 @@
   <el-button type="button" @click="onAddNode">增加node</el-button>
 
   <div class="dnd-flow" @drop="onDrop">
-    <VueFlow :nodes="nodes" :edges="edges" @dragover="onDragOver" @dragleave="onDragLeave">
+    <VueFlow v-model:nodes="nodes" :edges="edges" @dragover="onDragOver" @dragleave="onDragLeave">
       <Background
         :style="{
           backgroundColor: isDragOver ? '#e7f3ff' : 'transparent',
@@ -182,8 +182,8 @@ function onAddNode() {
   // add a single node to the graph
   const newNode = generateRandomNode();
   console.log("Before adding node:", nodes.value);
-  // addNodes([newNode]);
-  nodes.value.push(newNode); // 直接修改 nodes.value
+  addNodes([newNode]);
+  // nodes.value.push(newNode); // 直接修改 nodes.value
   console.log("After adding node:", nodes.value);
 }
 
