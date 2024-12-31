@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="common-header-bar" >
       <div>
         <el-button v-if ="isCollapse == true" type="primary" @click="handMenu">展示菜单</el-button>
@@ -16,7 +15,6 @@
         </el-dropdown-menu>
       </template>
     </el-dropdown>
-</div>
 <!-- Dialog 弹窗部分 -->
 <el-dialog v-model="dialogVisible" title="修改个人信息" width="400px" >
       <el-form ref="formRef" :model="formData" label-width="80px" style="margin-top: 20px;">

@@ -1,6 +1,6 @@
 <template>
   <el-container class="common-layout">
-    <!-- 这里吧el-side注释掉了,因为侧边栏已经封装了且不影响el-container的flex左右样式,不去掉会多个侧边栏 -->
+    <!-- 这里el-side注释掉不影响el-container的flex左右样式,不去掉会多个侧边栏 -->
     <!-- <el-aside > -->
     <commonSider></commonSider>
     <!-- </el-aside>  -->

@@ -12,6 +12,8 @@
         :gap="8"
       />
       <p v-if="isDragOver">Drop here</p>
+      <MiniMap pannable zoomable />
+      <Controls />
 
       <!-- bind your custom node type to a component by using slots, slot names are always `node-<type>` -->
       <!-- 如果special节点有多个这里是遍历进行渲染的，这样的话同类的node就可以定制化开发了，比如有些special节点增加特定的点击事件，有些节点只有出的handle没有入的之类的 -->
@@ -72,6 +74,8 @@ const { onDragOver, onDrop, onDragLeave, isDragOver } = useDragAndDrop();
 const { onNodeClick, onEdgeClick } = useVueFlow();
 const selectedNode = ref<Node | null>(null);
 const dialogVisible = ref(false);
+import { MiniMap } from "@vue-flow/minimap";
+import { Controls } from "@vue-flow/controls";
 
 onConnect((params) => {
   addEdges([params]);
@@ -223,12 +227,11 @@ function logEvent(name: string, data: any) {
 }
 
 .dnd-flow aside {
-  color: #fff;
   font-weight: 700;
   border-right: 1px solid #eee;
   padding: 15px 10px;
   font-size: 12px;
-  background: #7c817fbf;
+  background-color: rgb(221.7, 222.6, 224.4);
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0 5px 10px #0000004d;
 }
