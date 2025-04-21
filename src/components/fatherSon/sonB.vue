@@ -18,7 +18,7 @@ interface Msg {
 const props = defineProps<{
     sonBMsg: Msg
 }>();
-
+// 父组件的:a=a传递需要子组件暴露其emit的update方法来完成双向传递
 const emit = defineEmits(['update:sonBMsg'])
 
 function updateValue(){

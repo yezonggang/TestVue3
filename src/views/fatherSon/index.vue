@@ -1,11 +1,12 @@
 <template>
+// 由于下面所有例子的子组件都是用props.msg方式来使用和修改msg，违反了单向传递原则，所以例子都需要重构！！！！
     <div class="outerDiv">
         <div class="fatherDiv">
-            <h4>父组件通过:key=传给子组件信息,给了{{ sonAMsg.money }}元</h4>
+            <h4>父组件通过:key=传给子组件Msg对象信息,给了{{ sonAMsg.money }}元</h4>
+            <h4>父组件通过:key=传给子组件简单类型的信息,simpleValue是{{simpleValue }}</h4>
             <el-button @click="sonAMsg.money=sonAMsg.money+1">父给子加money</el-button>
             <sonA 
-            :name="sonAMsg.name"
-            :money="sonAMsg.money"
+            :simpleValue="simpleValue"
             :sonAMsg="sonAMsg">
         </sonA>
         </div>
@@ -64,6 +65,7 @@ const sonAMsg = reactive({
     name:"sonA",
     money:1
 });
+const simpleValue = ref(1)
 
 
 // v-model:sonBMsg="sonBMsg" 实际上是 :sonBMsg="sonBMsg" 和 @update:sonBMsg 的组合。
